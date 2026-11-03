@@ -21,7 +21,7 @@ Each project is designed to build practical shell scripting skills, master core 
 | :---: | :--- | :--- | :---: |
 | **01** | **[System Information Reporter](./sysreport)** | `hostname`, `uname`, `grep`, `cut`, `uptime`, `free`, `df`, pipes, command substitution, stdout redirection | ✅ Completed |
 | **02** | **[File Organizer](./file-organizer)** | `mv`, `mkdir`, `for` loops, conditional testing (`-f`), parameter expansion (`${##*.}`) | ✅ Completed |
-| **03** | **Backup Utility** | `tar`, compression (`gzip`/`bzip2`), timestamps, backup strategies, restoration testing | 🔄 In Progress |
+| **03** | **[Backup & Restore Utility](./backup-utility)** | `tar`, compression (`gzip`), timestamps (`date`), archive creation (`-c`), interactive selection, restoration testing (`-x -C`) | 🔄 In Progress |
 | **04** | **Disk Space Monitor** | `df`, `du`, exit statuses (`$?`), threshold conditionals, alerts | ⏳ Upcoming |
 | **05** | **Service Health Checker** | `systemctl`, service management, process inspection, system logs | ⏳ Upcoming |
 | **06** | **Shared Team Workspace** | `chmod`, `chown`, `chgrp`, user groups, special permissions (SGID, Sticky Bit) | ⏳ Upcoming |
@@ -42,5 +42,8 @@ Each project is designed to build practical shell scripting skills, master core 
 ├── sysreport/
 │   ├── sysreport.sh
 │   └── report.txt
-└── file-organizer/
-    └── organise.sh
+├── file-organizer/
+│   └── organise.sh
+└── backup-utility/
+    ├── backup.sh
+    └── restore.sh

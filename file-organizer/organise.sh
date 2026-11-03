@@ -1,5 +1,11 @@
 #!/bin/bash
 
+BLUE='\033[0;34m'
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+NC='\033[0m' # No Color
+
+
 if [ $# -gt 1 ]
 then
 echo "Sorry, only one directory at a time please"
@@ -8,25 +14,31 @@ sleep 1s
 exit
 fi
 
-
-echo "Welcome to MLSG's file organiser"
+echo "=============================================================="
+echo "============= Welcome to MLSG's file organiser  ============="
+echo "=============================================================="
 sleep 0.5s
 if [ $1 ]
 then
+echo "=============================================================="
 echo "I see you wanted to organise the $1 directory"
 TARGET_DIR=$1
 else
-echo "Please type the directory to organise:"
+echo "=============================================================="
+echo "Please type the directory to organise (NO Relative path):"
 read TARGET_DIR
 fi
 
 sleep 1.2s
+echo "=============================================================="
 echo "Let me just verify if the directory is valid..."
 sleep 1s
 if [ -d "$TARGET_DIR" ]
 then
+	echo "=============================================================="
 	echo "Great, let's get started!"
 else
+	echo "=============================================================="
 	echo "Sorry, not a valid directory. Exiting now..."
 	sleep 1.5s
 	exit
